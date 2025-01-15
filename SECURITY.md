@@ -1,21 +1,9 @@
 # Security Policy
 
-## Supported Versions
+To report a security issue (security vulnerability in GitHub), please report it through the coordinated disclosure process or use the GitHub Security Advisory "Report a Vulnerability" tab.
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Otherwise, to address a reported vulnerability as a security issue in my repository, or a simple bug. 
+As we seriously consider security bugs, we appreciate your efforts to responsibly disclose your findings. Any concerns and advice provided by the vulnerability reporter will be taken into careful consideration, and are welcome as they provide more efficiency, efficacy and effectiveness in the fixation process.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
-
-## Reporting a Vulnerability
-
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Please direct any requests, reports or issues to me https://sites.google.com/site/luisaconsiglieri or https://www.linkedin.com/in/luisa-da-cunha-consiglieri-73a3b640
+as this repository is an one-person maintainer and will not always be up to date.
