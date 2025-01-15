@@ -1,4 +1,4 @@
-The present project stands for the authored code to my current research work on modeling the # FocalLaserAblationStudy
+The present project stands for the authored code to my current research work on modeling the #FocalLaserAblationStudy
 taking the FAIR principles for open data into account.
 Namely, it deals with the software regarding the details of the calculation procedure.
 
