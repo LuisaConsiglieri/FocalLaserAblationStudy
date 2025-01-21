@@ -27,10 +27,7 @@ ell = 2*r_i ; % tumor length
 z_fatty = 5 ; % surrounding healthy tissue
 L = ell + z_fatty ; % total length = 2.5 cm
 
-% zz_end = ell; % TUMOR only
-zz_end = L;
-
-zz = linspace(L0,zz_end);
+zz = linspace(L0,L);
 count = 1;
 while zz(count) < 0
     count = count +1;
@@ -48,4 +45,3 @@ zz(iell) = ell;
 
 z1 = zz(1 : iell-1);   %   z1(end) = 19.949 ;  length(z1) = 80
 z2 = linspace(ell, L, N_out);     % z2(1) = ell;  1x20
-
