@@ -13,11 +13,9 @@ while rr(count) < r_i
 end
 
 rr(2) = r_f; % matching value
-[rr(1) rr(2) rr(3)]; % validation
 
 ii = count; % 41 ok
 rr(ii) = r_i;
-[ rr(ii-1) rr(ii) rr(ii+1) ]; % validation
 
 % ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -27,7 +25,7 @@ ell = 2*r_i ; % tumor length
 z_fatty = 5 ; % surrounding healthy tissue
 L = ell + z_fatty ; % total length = 2.5 cm
 
-zz = linspace(L0,L);
+zz = linspace(L0, L);
 count = 1;
 while zz(count) < 0
     count = count +1;
