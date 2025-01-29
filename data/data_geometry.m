@@ -4,9 +4,9 @@
 r_f = 0.3 ;  % radius of optical fiber
 r_i = 10 ; % radius of tumor inner = 1 cm
 r_fatty = 15 ; % surrounding healthy tissue
-r_o = r_i+ r_fatty ; % outer radius = 2.5 cm
+r_o = r_i + r_fatty ; % outer radius = 2.5 cm
 
-rr = linspace(0,r_o);
+rr = linspace(0, r_o);
 count = 1;
 while rr(count) < r_i
     count = count +1;
@@ -34,7 +34,7 @@ end
 i0 = count; % 1
 z0 = zz(count); % find(zz==0)
 while zz(count) < ell
-    count=count+1;
+    count = count + 1;
 end
 
 iell = count; % 81
