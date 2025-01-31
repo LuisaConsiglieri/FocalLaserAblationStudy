@@ -1,8 +1,10 @@
-# Repository structure
+# Description
 > [!NOTE] 
 > Description is in the process of being written.
 
-## Contents
+## Repository structure
+The repository includes files such as README.md, LICENSE, CODE_OF_CONDUCT.md, SECURITY.md,
+and the following directories, which contain the computer code for research on modeling Focal Laser Ablation (FLA). 
 - [Data](#data)
 
 # Data directory contents
