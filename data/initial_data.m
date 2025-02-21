@@ -93,3 +93,6 @@ P_laser = [5 1.3] ; % watt
 n = [ 1.4 1.4 1.35 1.35]; %  breast + prostate
 nu = 3*10^(8+3) ./n; % 1x4 light velocity [mm/s]
 
+distance_sr = 1./mu_sr;
+r_detector = - 1.4399./n.^2 + 0.7099./n+ 0.6681 + 0.063*n;
+gamma_r = (1+ r_detector)./(1 - r_detector);
