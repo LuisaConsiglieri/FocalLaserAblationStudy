@@ -6,9 +6,9 @@
 The repository includes files such as README.md, LICENSE, CODE_OF_CONDUCT.md, SECURITY.md,
 and the following directories, which contain the computer code for research on modeling Focal Laser Ablation (FLA). 
 - [Data](##data)
- - [data_geometry.m]
- - [initial_data.m]
- - [data_source.m] 
+ - [data_geometry.m](###data_geometry)
+ - [initial_data.m] (###data_initial)
+ - [data_source.m] (###data_source)
 
 ## Data directory contents
 
