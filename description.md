@@ -7,7 +7,7 @@ The repository includes files such as README.md, LICENSE, CODE_OF_CONDUCT.md, SE
 and the following directories, which contain the computer code for research on modeling Focal Laser Ablation (FLA). 
 - [Data](#data)
 
-# Data directory contents
+## Data directory contents
 
 ### data_geometry.m
 This script stores the geometric parameters [mm].
@@ -23,3 +23,4 @@ This script stores the initial data [mm]. References of the optical parameters [
 - Niemz, M. Laser-tissue interactions: Fundamentals and applications. Springer-Verlag, 2007.
 
 ### data_source.m
+This script stores parameters for the source of scattered photons S [W/mm^3].
