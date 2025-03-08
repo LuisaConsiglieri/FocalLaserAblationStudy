@@ -14,18 +14,18 @@ for ll = 1:3
   if (ll == 1)
     for j = 1:4
       E(ll, 1, j) = SS(ll,j)*P_laser(1) /( pi* r_f^2 );
-    endfor
+    end
   elseif (ll == 2)
     for pw = 1:2
       for j = 1:4
       E(ll, pw, j) = SS(ll,j)*P_laser(pw) /( pi* r_f^2 );
-      endfor
-    endfor
+      end
+    end
   elseif (ll == 3)
     for j = 1:4
       E(ll, 2, j) = SS(ll,j)*P_laser(2) /( pi* r_f^2 );
-    endfor
-  endif
-endfor
+    end
+  end
+end
 
 
