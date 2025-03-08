@@ -1,9 +1,10 @@
 cff-version: 1.1.0
 message: "If you use this software, please cite it as below."
 authors:
-- family-name: Consiglieri
-  given-name: Luisa
-Zenodo: https://doi.org/10.5281/zenodo.14993810
-title: LuisaConsiglieri/FocalLaserAblationStudy: v1.1.0
+- family-names: Consiglieri
+  given-names: Luisa
+  orcid: https://orcid.org/0000-0002-1002-3711
+title: LuisaConsiglieri/FocalLaserAblationStudy
 version: v1.1.0
+doi:10.5281/zenodo.14993810
 date-released: 2025-03-08
