@@ -55,16 +55,15 @@ indices = [il ii i0 iell];
 lambda = [810  980  1064];
 
 % absorption coefficient [cm^(-1)= 0.1 mm^(-1)] breast tumor + fatty - prostate tumor + healthy
-mu_a = [0.1   0.08   0.15 0.06 ;  % lambda = 810 nm
-        0.2   0.07   0.16 0.05 ;  % lambda = 980 nm
-        0.25  0.06   0.17 0.04 ] * 0.1; % lambda = 1,064 nm
-% 4.0e-3 < mu_a < 5.0e-2 , 0.1 < mu_sr < 2.0.
+mu_a = [0.08  0.17   0.12  0.6 ;  % lambda = 810 nm
+        0.07  0.20   0.11  0.5 ;  % lambda = 980 nm
+        0.06  0.30   0.10  0.4 ] * 0.1; % lambda = 1,064 nm
 
 % reduced scattering coefficient [mm^(-1)]
 % scale parameter [mm^(-1)] carcinoma breast + adipose breast - prostate + healthy
-a = [2.1 2.0 3.4 3.0];
+a = [2.07  1.68  3.36  3.01];
 % scattering power
-b = [1.487 1.054 1.712 1.549];
+b = [1.487 1.055 1.712 1.549];
 
 mu_sr = zeros(3, 4); % Initialize mu_sr
 for l =1:3
@@ -94,6 +93,9 @@ P_laser = [5 1.3];
 n = [ 1.4 1.4 1.35 1.35]; %  breast + prostate
 nu = 3*10^(8+3)./n; % 1x4 light velocity [mm/s]
 
+% the reflection factors of the fluxes
 distance_sr = 1./mu_sr;
 r_detector = - 1.4399./n.^2 + 0.7099./n + 0.6681 + 0.063*n;
 gamma_r = (1+ r_detector) ./ (1 - r_detector);
+
+validness = mu_a./mu_sr;
