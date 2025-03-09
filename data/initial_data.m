@@ -96,6 +96,7 @@ nu = 3*10^(8+3)./n; % 1x4 light velocity [mm/s]
 % the reflection factors of the fluxes
 distance_sr = 1./mu_sr;
 r_detector = - 1.4399./n.^2 + 0.7099./n + 0.6681 + 0.063*n;
-gamma_r = (1+ r_detector) ./ (1 - r_detector);
+gamma_r = (1 + r_detector) ./ (1 - r_detector);
 
+% validness of the diffusion approximation of the radiative transfer equation
 validness = mu_a./mu_sr;
