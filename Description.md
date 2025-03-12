@@ -27,4 +27,8 @@ This script stores parameters for the source of scattered photons S [W/mm^3].
 
 ## Graphical representations of the source S directory contents
 
+### SourceGraphics_linear.m
+This function illustrates the graphical representations to the source S(r_f,z).
 
+### SourceGraphics_semilogy.m
+ 

@@ -83,7 +83,7 @@ mu_tr = mu_a + mu_sr; % 3x4 transport attenuation coefficient [mm^(-1)]
 D = (3*mu_tr).^(-1);  % 3x4 diffusion coefficient [mm]
 
 mu_eff2 = 3*mu_tr.*mu_a; % = mu_a/D
-mu_eff = sqrt(mu_eff2);
+mu_eff = sqrt(mu_eff2); % effective attenuation coefficient
 PenetrationDepth = 1./mu_a; % [mm]
 EffeciveOpticalPenetration = 1./mu_eff; % [mm]
 
