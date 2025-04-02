@@ -24,4 +24,4 @@ ylabel('S, W/mm^3')
 
 axis ("tic(x)", "label");
 
-endfunction
+end
