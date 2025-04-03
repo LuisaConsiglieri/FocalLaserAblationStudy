@@ -4,7 +4,7 @@
 SS = zeros(3,4);
 for l = 1:3
   for j = 1:4
-  SS(l,j) = mu_s(l,j)* (mu_t(l,j) +g(l,j)*mu_a(l,j)) / mu_tr(l,j);
+    SS(l,j) = mu_s(l,j)* (mu_t(l,j) +g(l,j)*mu_a(l,j)) / mu_tr(l,j);
   end
 end
 
@@ -18,7 +18,7 @@ for ll = 1:3
   elseif (ll == 2)
     for pw = 1:2
       for j = 1:4
-      E(ll, pw, j) = SS(ll,j)*P_laser(pw) /( pi* r_f^2 );
+        E(ll, pw, j) = SS(ll,j)*P_laser(pw) /( pi* r_f^2 );
       end
     end
   elseif (ll == 3)
