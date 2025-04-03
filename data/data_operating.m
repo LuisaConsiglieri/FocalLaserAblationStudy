@@ -26,7 +26,7 @@ switch (choice)
      ll = l3;  % corresponding to wavelength of 1064nm
      pw = pw2;
      t_pulse = t_NdYAG;
-endswitch
+end
 
 end
 
