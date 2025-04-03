@@ -10,7 +10,7 @@ and the following directories, which contain the computer code for research on m
 
 ## Data directory contents
 
-### data_geometry.m
+### [data_geometry.m](data/data_geometry.m)
 This script stores the geometric parameters [mm].
 In this script, the value L0 is set to zero. However, the present code allows other values for L0.
 
