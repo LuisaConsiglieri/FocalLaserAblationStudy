@@ -25,10 +25,13 @@ This script stores the initial data [mm]. References of the optical parameters [
 ### data_source.m
 This script stores parameters for the source of scattered photons S [W/mm^3].
 
+### data_operating.m
+This script stores the wavelengths and powers under study.
+
 ## Graphical representations of the source S directory contents
 
 ### SourceGraphics_linear.m
 This function produces 2-D plots to the source S(r_f,z) for the wavelengths and powers under study.
 
 ### SourceGraphics_semilogy.m
- 
+This function produces 2-D plots, using a logarithmic scale for the y-axis, to the source S(r_f,z) for the wavelengths and powers under study.
