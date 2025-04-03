@@ -1,5 +1,5 @@
 function SourceGraphics_linear(z1, source1, z2, source2)
-% This function illustrates the graphical representations to the source S(r_f,z)
+% This function  produces 2-D plots to the source S(r_f,z)
  
 % --------------------------Linear ------------------------
 ll = 1;  % 810nm and pw = 1
