@@ -3,25 +3,25 @@ function SourceGraphics_semilogy(z1, source1, z2, source2)
 
 % ------------------------------ semilogy ---------------------------------
 ll = 1;  % 810nm and pw = 1
-semilogy(z1, source1(ll,1,:), 'b', z2, source2(ll,1,:), 'b')
+semilogy(z1, source1(ll, 1, :), 'b', z2, source2(ll, 1, :), 'b')
 hold on
 
 ll = 2; % 980nm
 pw = 1;
-semilogy(z1, source1(ll, pw,:), 'b--', z2, source2(ll, pw,:), 'b--')
+semilogy(z1, source1(ll, pw, :), 'b--', z2, source2(ll, pw, :), 'b--')
 hold on
 pw = 2;
-semilogy(z1, source1(ll, pw,:), 'r--', z2, source2(ll, pw,:), 'r--')
+semilogy(z1, source1(ll, pw, :), 'r--', z2, source2(ll, pw, :), 'r--')
 hold on
 
 ll = 3; % 1064nm, pw = 2
-semilogy(z1, source1(ll,2,:), 'r', z2, source2(ll,2,:), 'r')
+semilogy(z1, source1(ll, 2, :), 'r', z2, source2(ll, 2, :), 'r')
 
 xlabel('z, mm')
 ylabel('S, W/mm^3')
 
 % ----------------------------------------------------------
 
+axis ("tic(x)", "label");
 
-%axis ("tic(x)", "label");
-endfunction
+end

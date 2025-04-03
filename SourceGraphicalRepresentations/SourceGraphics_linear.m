@@ -20,4 +20,4 @@ plot(z1, source1(ll, 2, :), 'r', z2, source2(ll, 2, :), 'r')
 xlabel('z, mm')
 ylabel('S, W/mm^3')
 
-endfunction
+end
