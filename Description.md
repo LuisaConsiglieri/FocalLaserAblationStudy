@@ -26,7 +26,7 @@ This script stores the initial data [mm]. References of the optical parameters [
 This script stores parameters for the source of scattered photons S [W/mm^3].
 
 ### data_operating.m
-This script stores the wavelengths and powers under study.
+This script stores the wavelengths and powers under study, and correspondent temporal pulse widths.
 
 ## Graphical representations of the source S directory contents
 
