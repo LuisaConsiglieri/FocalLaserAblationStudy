@@ -1,6 +1,7 @@
 function SourceGraphics_semilogy(z1, source1, z2, source2)
-% This function illustrates the graphical representations to the source S(r_f,z)
-
+% This function produces 2-D plots, using a logarithmic scale for the y-axis, to the source S(r_f,z)
+% for the wavelengths and powers under study.
+ 
 % ------------------------------ semilogy ---------------------------------
 ll = 1;  % 810nm and pw = 1
 semilogy(z1, source1(ll, 1, :), 'b', z2, source2(ll, 1, :), 'b')
