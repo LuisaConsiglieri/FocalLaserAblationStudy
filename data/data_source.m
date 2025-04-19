@@ -4,11 +4,11 @@
 SS = zeros(3,4);
 for l = 1:3
   for j = 1:4
-    SS(l,j) = mu_s(l,j)* (mu_t(l,j) +g(l,j)*mu_a(l,j)) / mu_tr(l,j);
+    SS(l,j) = mu_s(l,j)* (mu_t(l,j) + g(l,j)*mu_a(l,j)) / mu_tr(l,j);
   end
 end
 
-% Maximum source values (r< r_f)
+% Maximum source values (r < r_f)
 E = zeros(3,2,4);  % source of scattered photons S [W/m3]
 for ll = 1:3
   if (ll == 1)

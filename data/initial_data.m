@@ -91,7 +91,7 @@ EffeciveOpticalPenetration = 1./mu_eff; % [mm]
 % maximum optical power output by the laser [watt]
 P_laser = [5 1.3]; 
 % relative refractive index
-n = [ 1.4 1.4 1.35 1.35]; %  breast + prostate
+n = [ 1.4 1.35 1.4 1.37]; %  breast (tumor+healthy) + prostate (tumor+healthy)
 nu = 3*10^(8+3)./n; % 1x4 light velocity [mm/s]
 
 % the reflection factors of the fluxes
