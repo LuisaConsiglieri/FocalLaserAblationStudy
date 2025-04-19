@@ -35,3 +35,9 @@ This function produces 2-D plots to the source S(r_f,z) for the wavelengths and 
 
 ### [SourceGraphics_semilogy.m](SourceGraphicalRepresentations/SourceGraphics_semilogy.m)
 This function produces 2-D plots, using a logarithmic scale for the y-axis, to the source S(r_f,z) for the wavelengths and powers under study.
+
+### [SourceGraphics_breast.m](SourceGraphicalRepresentations/SourceGraphics_breast.m)
+This script illustrates the graphical representations to the source S(r_f,z) in the tumor-adipose breast tissue.
+
+### [SourceGraphics_prostate.m](SourceGraphicalRepresentations/SourceGraphics_prostate.m)
+This script illustrates the graphical representations to the source S(r_f,z) in the tumor-healthy prostate tissue.
