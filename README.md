@@ -1,4 +1,4 @@
-# Focal Laser Ablation study
+# Focal Laser Ablation study [![DOI](https://zenodo.org/badge/915730068.svg)](https://doi.org/10.5281/zenodo.14993809)
 
 The present project stands for the computer code to my current research work on modeling the Focal Laser Ablation (FLA)
 taking the FAIR principles for open data into account.
