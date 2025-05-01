@@ -49,7 +49,8 @@ This script illustrates the graphical representations to the source $S(r_\mathrm
 
 ### [Zsolution.m](ExactSolutions/Zsolution.m)
 This function computes the fluence rate as function on the longitudinal coordinate $z$. This function assumes that the input argument (mu_t, eta, zz, ell, index_z) is provided correctly when calling the function. As defined in [initial_data.m](Data/initial_data.m):
-* mu_t stands for total attenuation coefficient $\mu_\mathrm{t}$ [mm$^{-1}$].
-* zz stands for the longitudinal coordinate $z$.
-* ell stands for the longitudinal distance $z = \ell$, corresponding to the tumor-healthy interface.
-* index_z stands for the relevant indices of zz, namely the tumor-healthy interface and outer boundary $z = L$.
+* mu_t stands for total attenuation coefficient $\mu_\mathrm{t}$ [mm$^{-1}$];
+* zz stands for the longitudinal coordinate $z$;
+* ell stands for the longitudinal distance $z = \ell$, corresponding to the tumor-healthy interface;
+* index_z stands for the relevant indices of zz, namely the tumor-healthy interface and outer boundary $z = L$,
+while eta 
