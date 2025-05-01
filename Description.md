@@ -7,6 +7,7 @@ The repository includes files such as README.md, LICENSE, CODE_OF_CONDUCT.md, SE
 and the following directories, which contain the computer code for research on modeling Focal Laser Ablation (FLA). 
 * [Data](#data-directory-contents)
 * [Source](#graphical-representations-of-the-source-s-directory-contents)
+* [Exact solutions](#exact-solutions-directory-contents)
 
 ## Data directory contents
 
@@ -31,13 +32,15 @@ This script stores the wavelengths and powers under study, and correspondent tem
 ## Graphical representations of the source S directory contents
 
 ### [SourceGraphics_linear.m](SourceGraphicalRepresentations/SourceGraphics_linear.m)
-This function produces 2-D plots to the source S(r_f,z) for the wavelengths and powers under study.
+This function produces 2-D plots to the source S(r_f,z) for the wavelengths and powers under study. This function assumes that the input arguments z1, source1, z2, and source2 are all properly defined and have the correct dimensions when calling the function.
 
 ### [SourceGraphics_semilogy.m](SourceGraphicalRepresentations/SourceGraphics_semilogy.m)
-This function produces 2-D plots, using a logarithmic scale for the y-axis, to the source S(r_f,z) for the wavelengths and powers under study.
+This function produces 2-D plots, using a logarithmic scale for the y-axis, to the source S(r_f,z) for the wavelengths and powers under study. This function assumes that the input arguments z1, source1, z2, and source2 are all properly defined and have the correct dimensions when calling the function.
 
 ### [SourceGraphics_breast.m](SourceGraphicalRepresentations/SourceGraphics_breast.m)
 This script illustrates the graphical representations to the source S(r_f,z) in the tumor-healthy breast tissue.
 
 ### [SourceGraphics_prostate.m](SourceGraphicalRepresentations/SourceGraphics_prostate.m)
 This script illustrates the graphical representations to the source S(r_f,z) in the tumor-healthy prostate tissue.
+
+## Exact solutions directory contents
