@@ -11,11 +11,11 @@ and the following directories, which contain the computer code for research on m
 
 ## Data directory contents
 
-### [data_geometry.m](data/data_geometry.m)
+### [data_geometry.m](Data/data_geometry.m)
 This script stores the geometric parameters [mm].
 In this script, the value L0 is set to zero. However, the present code allows other values for L0.
 
-### [initial_data.m](data/initial_data.m)
+### [initial_data.m](Data/initial_data.m)
 This script stores the initial data [mm]. References of the optical parameters [cm]:
 
 - Jacques, S. Optical properties of biological tissues: A review. Phys. Med. Biol. 2013, 58, R37-R61. https://doi.org/10.1088/0031-9 155/58/11/R37
@@ -23,11 +23,14 @@ This script stores the initial data [mm]. References of the optical parameters [
 - Niemz, M. Laser-tissue interactions: Fundamentals and applications. Springer-Verlag, 2007.
 - Capart, A.; Ikegaya, S.; Okada, E.; Machida, M.; Hoshi, Y. Experimental tests of indicators for the degree of validness of the diffusion approximation. J. Phys. Commun. 2021, 5. https://doi.org/10.1088/2399-6528/abe4e1
 
-### [data_source.m](data/data_source.m)
+### [data_source.m](Data/data_source.m)
 This script stores parameters for the source of scattered photons S [W/mm^3].
 
-### [data_operating.m](data/data_operating.m)
+### [data_operating.m](Data/data_operating.m)
 This script stores the wavelengths and powers under study, and correspondent temporal pulse widths.
+
+### [data_work.m](Data/data_work.m)
+This script stores the working parameters, according to Appendices A and B https://doi.org/10.3390/photonics12040400 .
 
 ## Graphical representations of the source S directory contents
 
