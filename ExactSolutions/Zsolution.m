@@ -10,32 +10,31 @@ function phiz = Zsolution(mu_t, eta, zz, ell, index_z)
 % Output:
 %   phiz    - Fluence rate as a function of z
 
-% Input validation
+% ----------------- Input validation -------------------------------
 if isempty(zz) || length(index_z) ~= 2
     error('Invalid inputs: zz must be non-empty, and index_z must have two elements.');
 end
 
 i0 = index_z(1); % Focal point
-iell = index_z(2); % Index defining the range of the tumor
+if i0 < 1 || i0 => length(zz)
+    error('Invalid input: i0 should be 1 <= i0 < length(zz).');
+end
+
+%------------------------------------------------------
 
 % Preallocate phiz
-phiz = zeros(1, length(zz)); % Preallocate for efficiency
+phiz = zeros(1, length(zz)-i0+1);
 
-% Check if zz(end) is approximately equal to ell
-if abs(zz(end) - ell) < 1e-6 % Only tumor
-    phiz = exp(-mu_t * zz); % 1 x length(zz)
-else
-    L = zz(end);
-    for j = i0:length(zz) 
+for j = i0:length(zz) 
+    if zz(end) <= ell % Only tumor
+        phiz(j-i0+1) = exp(-mu_t * zz(j-i0+1));
+    else
+        L = zz(end);
+        iell = index_z(2); % Index defining the range of the tumor
         if j <= iell % Tumor
             phiz(j-i0+1) = exp(-mu_t * zz(j-i0+1));
         else
-            % Ensure denominator is non-zero
-            denom = sinh(eta * (L - ell));
-            if abs(denom) < 1e-6
-                error('Division by zero: sinh(eta * (L - ell)) is zero.');
-            end
-            phiz(j-i0+1) = phiz(iell) * sinh(eta * (L - zz(j-i0+1))) / denom;
+            phiz(j-i0+1) = phiz(iell) * sinh(eta * (L - zz(j-i0+1))) / sinh(eta * (L - ell));
         end
     end
 end
