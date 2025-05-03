@@ -40,7 +40,7 @@ This script stores the working parameters, according to Appendices A and B <http
 
 ## Graphical representations of the source S directory contents
 
-The folder [SourceGraphics](SourceGraphics) deals with the source of the scattered photons $S$ $[\textnormal{W/mm}^3]$, defined in (2) [Consiglieri, 2025a], and its graphical representations in Figure 2 [Consiglieri, 2025a].
+The folder [SourceGraphicalRepresentations](SourceGraphicalRepresentations) deals with the source of the scattered photons $S$ $[\textnormal{W/mm}^3]$, defined in (2) [Consiglieri, 2025a], and its graphical representations in Figure 2 [Consiglieri, 2025a].
 
 [Consiglieri, 2025a]: Consiglieri, Luisa. Exact solutions to cancer laser ablation modeling. arXiv:2503.07226 [math.AP] (2025) <https://doi.org/10.48550/arXiv.2503.07226>.
 
