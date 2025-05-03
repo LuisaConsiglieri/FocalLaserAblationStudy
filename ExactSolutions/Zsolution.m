@@ -25,12 +25,14 @@ end
 % Preallocate phiz
 phiz = zeros(1, length(zz)-i0+1);
 
-for j = i0:length(zz) 
-    if zz(end) <= ell % Only tumor
+if zz(end) <= ell % Only tumor
+    for j = i0:length(zz)
         phiz(j-i0+1) = exp(-mu_t * zz(j-i0+1));
-    else
-        L = zz(end);
-        iell = index_z(2); % Index defining the range of the tumor
+    end
+else
+    L = zz(end);
+    iell = index_z(2); % Index defining the range of the tumor
+    for j = i0:length(zz)
         if j <= iell % Tumor
             phiz(j-i0+1) = exp(-mu_t * zz(j-i0+1));
         else
