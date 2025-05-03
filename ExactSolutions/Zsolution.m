@@ -17,9 +17,8 @@ end
 
 i0 = index_z(1); % Focal point
 if i0 < 1 || i0 => length(zz)
-    error('Invalid input: i0 should be 1 <= i0 < length(zz).');
+    error('Invalid input: index_z(1) should be 1 <= index_z(1) < length(zz).');
 end
-
 %------------------------------------------------------
 
 % Preallocate phiz
@@ -32,6 +31,9 @@ if zz(end) <= ell % Only tumor
 else
     L = zz(end);
     iell = index_z(2); % Index defining the range of the tumor
+    if iell <= i0 || iell => length(zz)
+        error('Invalid input: index_z(2) should be index_z(1) < index_z(2) < length(zz).');
+    end
     for j = i0:length(zz)
         if j <= iell % Tumor
             phiz(j-i0+1) = exp(-mu_t * zz(j-i0+1));
