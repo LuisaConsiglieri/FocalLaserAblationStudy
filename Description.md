@@ -21,10 +21,10 @@ This script stores the geometric parameters only [mm]. In this script, the value
 
 This script stores the initial data [mm], including the geometric parameters. References of the optical parameters [cm]:
 
-- Jacques, S. Optical properties of biological tissues: A review. Phys. Med. Biol. 2013, 58, R37-R61. <https://doi.org/10.1088/0031-9155/58/11/R37>
-- Sandell, J.; Zhu, T. A review of in-vivo optical properties of human tissues and its impact on PDT. J. Biophotonics 2011, 4, 773-787. <https://doi.org/10.1002/jbio.201100062>
-- Niemz, M. Laser-tissue interactions: Fundamentals and applications. Springer-Verlag, 2007.
-- Capart, A.; Ikegaya, S.; Okada, E.; Machida, M.; Hoshi, Y. Experimental tests of indicators for the degree of validness of the diffusion approximation. J. Phys. Commun. 2021, 5. <https://doi.org/10.1088/2399-6528/abe4e1>
+- Jacques, S. Optical properties of biological tissues: A review. *Phys. Med. Biol.* **58** (2013), R37-R61. <https://doi.org/10.1088/0031-9155/58/11/R37>
+- Sandell, J.; Zhu, T. A review of in-vivo optical properties of human tissues and its impact on PDT. *J. Biophotonics* **4** (2011), 773-787. <https://doi.org/10.1002/jbio.201100062>
+- Niemz, M. *Laser-tissue interactions: Fundamentals and applications*. Springer-Verlag, 2007.
+- Capart, A.; Ikegaya, S.; Okada, E.; Machida, M.; Hoshi, Y. Experimental tests of indicators for the degree of validness of the diffusion approximation. *J. Phys. Commun.* **5** (2021), 025012. <https://doi.org/10.1088/2399-6528/abe4e1>
 
 ### [data_source.m](Data/data_source.m)
 
@@ -40,9 +40,9 @@ This script stores the working parameters, according to Appendices A and B <http
 
 ## Graphical representations of the source S directory contents
 
-The folder SourceGraphics deals with the source of the scattered photons $S$ [W/mm$^3$], defined in (2) [Consiglieri, 2025a], and its graphical representations in Figure 2 [Consiglieri, 2025a].
+The folder [SourceGraphics](SourceGraphics) deals with the source of the scattered photons $S$ $[\textnormal{W/mm}^3]$, defined in (2) [Consiglieri, 2025a], and its graphical representations in Figure 2 [Consiglieri, 2025a].
 
-[Consiglieri, 2025a] Consiglieri, Luisa. Exact solutions to cancer laser ablation modeling. arXiv:2503.07226 [math.AP] (2025) <https://doi.org/10.48550/arXiv.2503.07226>.
+[Consiglieri, 2025a]: Consiglieri, Luisa. Exact solutions to cancer laser ablation modeling. arXiv:2503.07226 [math.AP] (2025) <https://doi.org/10.48550/arXiv.2503.07226>.
 
 ```mermaid
 graph TD;
@@ -85,15 +85,16 @@ This script illustrates the graphical representations to the source $S(r_\mathrm
 
 ## Exact solutions directory contents
 
-The folder ExactSolutions deals with the fluence rate $\phi$, and its graphical representations in Figure 3 [Consiglieri, 2025].
+The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, and its graphical representations in Figure 3 [Consiglieri, 2025].
 
-[Consiglieri, 2025] Consiglieri, Luisa. Exact Solutions to Cancer Laser Ablation Modeling. Photonics 12 :4 (2025), 400. <https://doi.org/10.3390/photonics12040400>.
+[Consiglieri, 2025] Consiglieri, Luisa. Exact Solutions to Cancer Laser Ablation Modeling. *Photonics* **12** :4 (2025), 400. <https://doi.org/10.3390/photonics12040400>
 
 ### [Zsolution.m](ExactSolutions/Zsolution.m)
 
 This function computes the fluence rate as function on the longitudinal coordinate $z$. This function assumes that the input argument (mu_t, eta, zz, ell, index_z) is provided correctly when calling the function. As defined in [initial_data.m](Data/initial_data.m):
-* mu_t stands for total attenuation coefficient $\mu_\mathrm{t}$ [mm$^{-1}$];
+* mu_t stands for total attenuation coefficient $\mu_\mathrm{t}$ $[\mathrm{mm}^{-1}]$;
 * zz stands for the longitudinal coordinate $z$;
 * ell stands for the longitudinal distance $z = \ell$, corresponding to the tumor-healthy interface;
 * index_z stands for the relevant indices of zz, namely the tumor-healthy interface and outer boundary $z = L$,
+
 while eta is the parameter $\eta\in\mathbb{R}$.
