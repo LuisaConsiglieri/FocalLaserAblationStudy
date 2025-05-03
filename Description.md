@@ -21,10 +21,10 @@ This script stores the geometric parameters only [mm]. In this script, the value
 
 This script stores the initial data [mm], including the geometric parameters. References of the optical parameters [cm]:
 
-- Jacques, S. Optical properties of biological tissues: A review. Phys. Med. Biol. 2013, 58, R37-R61. https://doi.org/10.1088/0031-9 155/58/11/R37
-- Sandell, J.; Zhu, T. A review of in-vivo optical properties of human tissues and its impact on PDT. J. Biophotonics 2011, 4, 773-787. https://doi.org/10.1002/jbio.201100062
+- Jacques, S. Optical properties of biological tissues: A review. Phys. Med. Biol. 2013, 58, R37-R61. <https://doi.org/10.1088/0031-9155/58/11/R37>
+- Sandell, J.; Zhu, T. A review of in-vivo optical properties of human tissues and its impact on PDT. J. Biophotonics 2011, 4, 773-787. <https://doi.org/10.1002/jbio.201100062>
 - Niemz, M. Laser-tissue interactions: Fundamentals and applications. Springer-Verlag, 2007.
-- Capart, A.; Ikegaya, S.; Okada, E.; Machida, M.; Hoshi, Y. Experimental tests of indicators for the degree of validness of the diffusion approximation. J. Phys. Commun. 2021, 5. https://doi.org/10.1088/2399-6528/abe4e1
+- Capart, A.; Ikegaya, S.; Okada, E.; Machida, M.; Hoshi, Y. Experimental tests of indicators for the degree of validness of the diffusion approximation. J. Phys. Commun. 2021, 5. <https://doi.org/10.1088/2399-6528/abe4e1>
 
 ### [data_source.m](Data/data_source.m)
 
@@ -36,13 +36,13 @@ This script stores the wavelengths and powers under study, and correspondent tem
 
 ### [data_work.m](Data/data_work.m)
 
-This script stores the working parameters, according to Appendices A and B https://doi.org/10.3390/photonics12040400 .
+This script stores the working parameters, according to Appendices A and B <https://doi.org/10.3390/photonics12040400>.
 
 ## Graphical representations of the source S directory contents
 
 The folder SourceGraphics deals with the source of the scattered photons $S$ [W/mm$^3$], defined in (2) [Consiglieri, 2025a], and its graphical representations in Figure 2 [Consiglieri, 2025a].
 
-[Consiglieri, 2025a] Consiglieri, Luisa. Exact solutions to cancer laser ablation modeling. arXiv:2503.07226 [math.AP] (2025) https://doi.org/10.48550/arXiv.2503.07226
+[Consiglieri, 2025a] Consiglieri, Luisa. Exact solutions to cancer laser ablation modeling. arXiv:2503.07226 [math.AP] (2025) <https://doi.org/10.48550/arXiv.2503.07226>.
 
 ```mermaid
 graph TD;
@@ -56,15 +56,15 @@ D--SourceGraphics_linear.m-->G[Figure 2c];
 D--SourceGraphics_semilogy.m-->H[Figure 2d];
 ```
 
->The wavelengths and powers under study are to simulate two types of lasers:
+> The wavelengths and powers under study are to simulate two types of lasers:
 >
->> Q-switched short-pulsed Nd:YAG laser operating at a wavelength of 1064 nm and power of 1.3 W;
->>
->> diode short-pulsed laser operating at wavelengths of
->> 
->>> 810 nm and power of 5 W;
->>> 
->>> 980 nm and powers of 1.3 W and 5 W.
+> - Q-switched short-pulsed Nd:YAG laser operating at a wavelength of 1064 nm and power of 1.3 W;
+>
+> - diode short-pulsed laser operating at wavelengths of
+> 
+>    - 810 nm and power of 5 W;
+>
+>    - 980 nm and powers of 1.3 W and 5 W.
 
 
 ### [SourceGraphics_linear.m](SourceGraphicalRepresentations/SourceGraphics_linear.m)
@@ -87,7 +87,7 @@ This script illustrates the graphical representations to the source $S(r_\mathrm
 
 The folder ExactSolutions deals with the fluence rate $\phi$, and its graphical representations in Figure 3 [Consiglieri, 2025].
 
-[Consiglieri, 2025] Consiglieri, Luisa. Exact Solutions to Cancer Laser Ablation Modeling. Photonics 12 :4 (2025), 400. https://doi.org/10.3390/photonics12040400 .
+[Consiglieri, 2025] Consiglieri, Luisa. Exact Solutions to Cancer Laser Ablation Modeling. Photonics 12 :4 (2025), 400. <https://doi.org/10.3390/photonics12040400>.
 
 ### [Zsolution.m](ExactSolutions/Zsolution.m)
 
