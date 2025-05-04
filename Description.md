@@ -77,11 +77,11 @@ This function produces 2-D plots, using a logarithmic scale for the y-axis, to t
 
 ### [SourceGraphics_breast.m](SourceGraphicalRepresentations/SourceGraphics_breast.m)
 
-This script illustrates the graphical representations to the source $S(r_\mathrm{f},z)$ in the tumor-healthy breast tissue. 
+This script produces the graphical representations to the source $S(r_\mathrm{f},z)$ in the tumor-healthy breast tissue, as illustrated in Figures 2(a) and 2(b).
 
 ### [SourceGraphics_prostate.m](SourceGraphicalRepresentations/SourceGraphics_prostate.m)
 
-This script illustrates the graphical representations to the source $S(r_\mathrm{f},z)$ in the tumor-healthy prostate tissue.
+This script produces the graphical representations to the source $S(r_\mathrm{f},z)$ in the tumor-healthy prostate tissue, as illustrated in Figures 2(c) and 2(d).
 
 ## Exact solutions directory contents
 
