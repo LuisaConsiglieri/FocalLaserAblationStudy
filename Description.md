@@ -97,4 +97,4 @@ This function computes the fluence rate as function on the longitudinal coordina
 * ell stands for the longitudinal distance $z = \ell$, corresponding to the tumor-healthy interface;
 * index_z stands for the relevant indices of zz, namely the tumor-healthy interface and outer boundary $z = L$,
 
-while eta is the parameter $\eta\in\mathbb{R}$.
+while eta is the real parameter $\eta$.
