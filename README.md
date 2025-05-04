@@ -3,7 +3,7 @@
 The present project stands for the computer code to my current research work on modeling the Focal Laser Ablation (FLA)
 taking the FAIR principles for open data into account. MSC classes: 78-04, 80-04.
 
-For the list of files alongside the description of each file, see [Description](Description).
+For the list of files alongside the description of each file, see [Description](Description.md).
 
 > The dataset deals with the software regarding the details of the calculation procedure according to the paper:
 > 
