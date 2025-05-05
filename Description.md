@@ -32,7 +32,11 @@ This script stores parameters for the source of scattered photons $S$.
 
 ### [data_operating.m](Data/data_operating.m)
 
-This script stores the wavelengths and powers under study, and correspondent temporal pulse widths.
+This script stores the wavelengths and powers under study, and correspondent temporal pulse widths:
+- choice = 1: 810 nm; 5 W; t_diode = 10 ps.
+- choice = 2: 980 nm; 5 W; t_diode = 10 ps.
+- choice = 3: 980 nm; 1.3 W; t_diode = 10 ps.
+- choice = 4: 1064 nm; 1.3 W; t_NdYAG = 2ms.
 
 ### [data_work.m](Data/data_work.m)
 
@@ -48,6 +52,7 @@ The folder [SourceGraphicalRepresentations](SourceGraphicalRepresentations) deal
 graph TD;
 A[initial_data.m]-->C[SourceGraphics_breast.m];
 B[data_source.m]-->C;
+A-->B;
 A-->D[SourceGraphics_prostate.m];
 B-->D;
 C--SourceGraphics_linear.m-->E[Figure 2a];
