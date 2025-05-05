@@ -91,7 +91,7 @@ This script produces the graphical representations to the source $S(r_\mathrm{f}
 
 ## Exact solutions directory contents
 
-The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, and its graphical representations in Figure 3 [Consiglieri, 2025].
+The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, and its exact form as established in [Consiglieri, 2025].
 
 [Consiglieri, 2025] Consiglieri, Luisa. Exact Solutions to Cancer Laser Ablation Modeling. *Photonics* **12** :4 (2025), 400. <https://doi.org/10.3390/photonics12040400>
 
@@ -107,7 +107,7 @@ while eta is the real parameter $\eta$.
 
 ## Graphical representations of the fluence rate directory contents
 
-The folder [FluenceGraphicalRepresentations](FluenceGraphicalRepresentations) deals with the fluence rate $\phi$ $[\textnormal{W/mm}^2]$.
+The folder [FluenceGraphicalRepresentations](FluenceGraphicalRepresentations) deals with the graphical representations of the fluence rate $\phi$ $[\textnormal{W/mm}^2]$, as illustrated in Figure 3 [Consiglieri, 2025].
 
 ### [RadialGraphics.m](FluenceGraphicalRepresentations/RadialGraphics.m)
 
