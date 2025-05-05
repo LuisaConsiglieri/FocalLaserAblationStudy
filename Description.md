@@ -101,7 +101,7 @@ This function computes the fluence rate as function on the longitudinal coordina
 * mu_t stands for total attenuation coefficient $\mu_\mathrm{t}$ $[\mathrm{mm}^{-1}]$;
 * zz stands for the longitudinal coordinate $z$;
 * ell stands for the longitudinal distance $z = \ell$, corresponding to the tumor-healthy interface;
-* index_z stands for the relevant indices of zz, namely the tumor-healthy interface and outer boundary $z = L$,
+* index_z stands for the relevant indices of zz, namely the location of the focus $z=0$ and the tumor-healthy interface $z = \ell$,
 
 while eta is the real parameter $\eta$.
 
