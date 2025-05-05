@@ -10,6 +10,7 @@ and the following directories, which contain the computer code for research on m
 * [Data](#data-directory-contents)
 * [Source](#graphical-representations-of-the-source-s-directory-contents)
 * [Exact solutions](#exact-solutions-directory-contents)
+* [Fluence rate](#graphical-representations-of-the-fluence-rate-directory-contents)
 
 ## Data directory contents
 
@@ -103,3 +104,10 @@ This function computes the fluence rate as function on the longitudinal coordina
 * index_z stands for the relevant indices of zz, namely the tumor-healthy interface and outer boundary $z = L$,
 
 while eta is the real parameter $\eta$.
+
+## Graphical representations of the fluence rate directory contents
+
+The folder [FluenceGraphicalRepresentations](FluenceGraphicalRepresentations) deals with the fluence rate $\phi$ $[\textnormal{W/mm}^2]$.
+
+### [RadialGraphics.m](FluenceGraphicalRepresentations/RadialGraphics.m)
+
