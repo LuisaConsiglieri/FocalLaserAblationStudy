@@ -99,7 +99,7 @@ The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, 
 
 This function computes the fluence rate as function on the longitudinal coordinate $z$. This function assumes that the input argument (mu_t, eta, zz, ell, index_z) is provided correctly when calling the function. As defined in [initial_data.m](Data/initial_data.m):
 * mu_t stands for total attenuation coefficient $\mu_\mathrm{t}$ $[\mathrm{mm}^{-1}]$;
-* zz stands for the longitudinal coordinate $z$;
+* zz stands for the optical coordinate $z$;
 * ell stands for the longitudinal distance $z = \ell$, corresponding to the tumor-healthy interface;
 * index_z stands for the relevant indices of zz, namely the location of the focus $z=0$ and the tumor-healthy interface $z = \ell$,
 
@@ -110,4 +110,13 @@ while eta is the real parameter $\eta$.
 The folder [FluenceGraphicalRepresentations](FluenceGraphicalRepresentations) deals with the graphical representations of the fluence rate $\phi$ $[\textnormal{W/mm}^2]$, as illustrated in Figure 3 [Consiglieri, 2025].
 
 ### [RadialGraphics.m](FluenceGraphicalRepresentations/RadialGraphics.m)
+
+This script is structured as follows:
+
+```mermaid
+graph TD;
+A1[choice = 1]-->B[data_operating.m]-->C1[Fluence_rate.m]--Fluence_zell.m-->E[Plot];
+A2[choice = 2]-->B-->C2[Fluence_rate.m]--Fluence_zell.m-->E;
+A3[choice = 3]-->B-->C3[Fluence_rate.m]--Fluence_zell.m-->E;
+```
 
