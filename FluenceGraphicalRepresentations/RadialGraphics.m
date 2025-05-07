@@ -5,7 +5,7 @@ choice = 1 % blue solid
 Fluence_rate
 Xtp = exp(zeta_in*t_p) - 1;
 Rfluence = Fluence_zell(Xtp, rr, phir0, ss_phir1, z1, phiz1, indices(3:4));
-Rbreast1 = plot(rr, Rfluence(:,2), 'b')
+Rbreast1 = plot(rr, Rfluence(:,2), 'b');
 hold on
 
 choice = 2 % blue dashed
@@ -13,7 +13,7 @@ choice = 2 % blue dashed
 Fluence_rate
 Xtp = exp(zeta_in*t_p) - 1;
 Rfluence = Fluence_zell(Xtp, rr, phir0, ss_phir1, z1, phiz1, indices(3:4));
-Rbreast2 = plot(rr, Rfluence(:,2), 'b--')
+Rbreast2 = plot(rr, Rfluence(:,2), 'b--');
 hold on
 
 choice = 3 % red dashed
@@ -21,7 +21,7 @@ choice = 3 % red dashed
 Fluence_rate
 Xtp = exp(zeta_in*t_p) - 1;
 Rfluence = Fluence_zell(Xtp, rr, phir0, ss_phir1, z1, phiz1, indices(3:4));
-Rbreast3 = plot(rr, Rfluence(:,2), 'r--')
+Rbreast3 = plot(rr, Rfluence(:,2), 'r--');
 hold off
 
 legStr3 = { '810 nm; 5 W', '980 nm; 5 W', '980 nm; 1.3 W' };
