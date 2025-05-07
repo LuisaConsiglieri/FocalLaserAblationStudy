@@ -91,7 +91,7 @@ This script produces the graphical representations to the source $S(r_\mathrm{f}
 
 ## Exact solutions directory contents
 
-The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, and its exact form as established in [Consiglieri, 2025].
+The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, and its exact form as defined in Section 4.1 (at $t = t_\mathrm{p}$) [Consiglieri, 2025].
 
 [Consiglieri, 2025] Consiglieri, Luisa. Exact Solutions to Cancer Laser Ablation Modeling. *Photonics* **12** :4 (2025), 400. <https://doi.org/10.3390/photonics12040400>
 
@@ -107,16 +107,16 @@ while eta is the real parameter $\eta$.
 
 ## Graphical representations of the fluence rate directory contents
 
-The folder [FluenceGraphicalRepresentations](FluenceGraphicalRepresentations) deals with the graphical representations of the fluence rate $\phi$ $[\textnormal{W/mm}^2]$, as illustrated in Figure 3 [Consiglieri, 2025].
+The folder [FluenceGraphicalRepresentations](FluenceGraphicalRepresentations) deals with the graphical representations of the fluence rate $\phi$ $[\textnormal{W/mm}^2]$, as illustrated in Figures 3 and 4 if $t_\mathrm{p} = 10$ ps and $t_\mathrm{p} = 1$ ps, respectively [Consiglieri, 2025].
 
 ### [RadialGraphics.m](FluenceGraphicalRepresentations/RadialGraphics.m)
 
 This script is structured as follows:
 
 ```mermaid
-graph TD;
-A1[choice = 1]-->B[data_operating.m]-->C1[Fluence_rate.m]--Fluence_zell.m-->E[Plot];
-A2[choice = 2]-->B-->C2[Fluence_rate.m]--Fluence_zell.m-->E;
-A3[choice = 3]-->B-->C3[Fluence_rate.m]--Fluence_zell.m-->E;
+graph LR;
+A1[/choice = 1/]-->B{data_operating.m}-->C1[Fluence_rate.m]--Fluence_zell.m-->E(((Plot)));
+A2[/choice = 2/]-->B-->C2[Fluence_rate.m]--Fluence_zell.m-->E;
+A3[/choice = 3/]-->B-->C3[Fluence_rate.m]--Fluence_zell.m-->E;
 ```
 
