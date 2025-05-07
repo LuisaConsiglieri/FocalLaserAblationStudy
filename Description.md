@@ -122,8 +122,10 @@ A3[/choice = 3/]-->B-->C3[Fluence_rate.m]--Fluence_zell.m-->E;
 
 ### [RadialGraphics_breast.m](FluenceGraphicalRepresentations/RadialGraphics_breast.m)
 
-This script is structured as follows:
+This script plots Figures 3a and 4a, under the function [data_operating.m](Data/data_operating.m) with t_diode = 10 ps and t_diode = 1 ps, respectively,
+and it is structured as follows:
 
 ### [RadialGraphics_prostate.m](FluenceGraphicalRepresentations/RadialGraphics_prostate.m)
 
-This script is structured as follows:
+This script plots Figures 3c and 4c, under the function [data_operating.m](Data/data_operating.m) with t_diode = 10 ps and t_diode = 1 ps, respectively,
+and it is structured as follows:
