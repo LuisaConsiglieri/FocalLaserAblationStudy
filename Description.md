@@ -91,7 +91,7 @@ This script produces the graphical representations to the source $S(r_\mathrm{f}
 
 ## Exact solutions directory contents
 
-The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, and its exact form as defined in Section 4.1 (at $t = t_\mathrm{p}$) [Consiglieri, 2025].
+The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, and its exact form as established in Section 4.1 (at $t = t_\mathrm{p}$) [Consiglieri, 2025].
 
 [Consiglieri, 2025] Consiglieri, Luisa. Exact Solutions to Cancer Laser Ablation Modeling. *Photonics* **12** :4 (2025), 400. <https://doi.org/10.3390/photonics12040400>
 
