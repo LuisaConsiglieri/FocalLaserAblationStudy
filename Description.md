@@ -132,7 +132,7 @@ The folder [FluenceGraphicalRepresentations](FluenceGraphicalRepresentations) de
 
 ### [RadialGraphics.m](FluenceGraphicalRepresentations/RadialGraphics.m)
 
-This script is structured as follows:
+For each optical distance zz(d) (1<= d < length(zz)), this switch-script is structured as follows:
 
 ```mermaid
 graph LR;
