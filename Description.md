@@ -107,16 +107,14 @@ while eta is the real parameter $\eta$.
 
 ### [Rsolution.m](ExactSolutions/Rsolution.m)
 
-% This function computes the radial elementary solutions.
-% Inputs:
-%   beta_out - Parameter $\beta_2$ related to fluence distribution, as defined in Appendix B;
-%   Rf       - Maximum value of the radial solution;
-%   r        - Array of r-coordinates;
-%   index_r  - Relevant indices in the radial direction, namely the fiber radius $r_\mathrm{f}$ and the inner radius $r_\mathrm{i}$;
-%   b0       - positive constant determined with the Robin boundary condition (6), which is given at Appendix A2.
-%
-% Output:
-%   R_3 (Appendix A.2) altogether with R_4 (Appendix B).
+This function computes the radial elementary solutions.
+- Inputs:
+  - beta_out - Parameter $\beta_2$ related to fluence distribution, as defined in Appendix B;
+  - Rf       - Maximum value of the radial solution;
+  - r        - Array of r-coordinates;
+  - index_r  - Relevant indices in the radial direction, namely the fiber radius $r_\mathrm{f}$ and the inner radius $r_\mathrm{i}$;
+  - b0       - positive constant determined with the Robin boundary condition (6), which is given at Appendix A2.
+- Output: R_3 (Appendix A.2) altogether with R_4 (Appendix B).
 
 ## Graphical representations of the fluence rate directory contents
 
