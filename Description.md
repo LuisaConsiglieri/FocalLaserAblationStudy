@@ -105,7 +105,17 @@ This function computes the longitudinal elementary solution $Z(z)$. This functio
 
 while eta is the real parameter $\eta$.
 
-### [Rsolution.m](ExactSolutions/Rsolution.m)
+### [Rsolution_A1.m](ExactSolutions/Rsolution_A1.m)
+
+This function computes the radial elementary solutions.
+- Inputs:
+  - bt - Parameter $(\beta_1, \beta_2)$ related to fluence distribution, as defined in Appendices A.1 and B, respectively;
+  - Rf       - Maximum value of the radial solution;
+  - r        - Array of r-coordinates;
+  - index_r  - Relevant indices in the radial direction, namely the fiber radius $r_\mathrm{f}$ and the inner radius $r_\mathrm{i}$.
+- Output: R_1 (Appendix A.1) altogether with R_2 (Appendix B).
+
+### [Rsolution_A2.m](ExactSolutions/Rsolution_A2.m)
 
 This function computes the radial elementary solutions.
 - Inputs:
