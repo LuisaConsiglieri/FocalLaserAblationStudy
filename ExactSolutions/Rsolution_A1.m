@@ -1,4 +1,4 @@
-function output = Rsolution_A1(bt, Rf, rr, index_r)
+function output = Rsolution_A1(bt, Rf, rr, index_r, Rbc)
 % This function computes the radial elementary solutions.
 % Inputs:
 %   bt - Parameter $(\beta_1,\beta_2)$ related to fluence distribution,
@@ -6,6 +6,7 @@ function output = Rsolution_A1(bt, Rf, rr, index_r)
 %   Rf       - Maximum value of the radial solution;
 %   rr       - Array of r-coordinates;
 %   index_r  - Relevant indices in the radial direction, namely the fiber radius $r_\mathrm{f}$ and the inner radius $r_\mathrm{i}$;
+%   Rbc      - constant aligned with the Robin boundary condition (6).
 %
 % Output: R_1 (Appendix A.1) altogether with R_2 (Appendix B).
 
@@ -30,7 +31,7 @@ B1_in = [besselj(0, bt(1)*r_f)  besselj(1, bt(1)*r_f) ; % J0 e J1 para beta1*r_f
 B1_out =[besselj(0, bt(2)*r_i)  besselj(1, bt(2)*r_i) ; % J0 J1 para beta2*r_i
          bessely(0, bt(2)*r_i)  bessely(1, bt(2)*r_i) ];
 
-% Flux at r = r_f: Derivative = 0
+% Flux continuity at r = r_f, i.e. flux derivative = 0
 W1_in = - (pi/2)*bt(1)*r_f*Rf* B1_in(2, 2);
 % Check for Division by Zero, ensure the denominator is non-zero.
 eps = 1e-10;
@@ -42,8 +43,8 @@ Y_in = (Rf - W1_in*B1_in(1, 1))/ B1_in(2, 1);
 % Continuity at r = r_i
 Ri = W1_in*besselj(0, bt(1)*r_i) + Y_in*bessely(0, bt(1)*r_i);
 DRi = - bt(1)* (W1_in*besselj(1, bt(1)*r_i) + Y_in*bessely(1, bt(1)*r_i));
-% outer Wronskian dependent parameters
-W1_out = - (pi/2)*r_i* (DRi*B1_out(2, 1) + bt(2)*Ri*B1_out(2, 2));
+% outer Wronskian dependent parameter determined in Appendix B.1 by using the Robin boundary condition (6)
+W1_out = - (pi/2)*r_i* (Rbc* DRi*B1_out(2, 1) + bt(2)*Ri*B1_out(2, 2));
 % Check for Division by Zero, ensure the denominator is non-zero.
 if abs(B1_out(2, 1)) < eps
     error('Division by zero: B1_out(2, 1) is too close to zero.');
