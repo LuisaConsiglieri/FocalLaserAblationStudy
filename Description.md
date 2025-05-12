@@ -107,21 +107,24 @@ while eta is the real parameter $\eta$.
 
 ### [Rsolution_A1.m](ExactSolutions/Rsolution_A1.m)
 
-This function computes the radial elementary solutions.
+This function computes the radial elementary solutions. This function assumes that the input argument (bt, Rf, rr, index_r, Rbc) is provided correctly when calling the function. In particular, the parameters passed to the Bessel functions do not lead to numerical inaccuracies in the Bessel function calculations. 
+
 - Inputs:
   - bt - Parameter $(\beta_1, \beta_2)$ related to fluence distribution, as defined in Appendices A.1 and B, respectively;
   - Rf       - Maximum value of the radial solution;
-  - r        - Array of r-coordinates;
-  - index_r  - Relevant indices in the radial direction, namely the fiber radius $r_\mathrm{f}$ and the inner radius $r_\mathrm{i}$.
+  - rr       - Array of r-coordinates;
+  - index_r  - Relevant indices in the radial direction, namely the fiber radius $r_\mathrm{f}$ and the inner radius $r_\mathrm{i}$;
+  - Rbc      - constant aligned with the Robin boundary condition (6).
 - Output: R_1 (Appendix A.1) altogether with R_2 (Appendix B).
 
 ### [Rsolution_A2.m](ExactSolutions/Rsolution_A2.m)
 
-This function computes the radial elementary solutions.
+This function computes the radial elementary solutions. This function assumes that the input argument (beta_out, Rf, rr, index_r, b0) is provided correctly when calling the function. In particular, the parameters passed to the Bessel functions do not lead to numerical inaccuracies in the Bessel function calculations. 
+
 - Inputs:
   - beta_out - Parameter $\beta_2$ related to fluence distribution, as defined in Appendix B;
   - Rf       - Maximum value of the radial solution;
-  - r        - Array of r-coordinates;
+  - rr       - Array of r-coordinates;
   - index_r  - Relevant indices in the radial direction, namely the fiber radius $r_\mathrm{f}$ and the inner radius $r_\mathrm{i}$;
   - b0       - positive constant determined with the Robin boundary condition (6), which is given at Appendix A2.
 - Output: R_3 (Appendix A.2) altogether with R_4 (Appendix B).
