@@ -149,6 +149,16 @@ A3[/choice = 3/]-->B-->C3[Fluence_rate.m]--Fluence_zell.m-->E;
 This script plots Figures 3a and 4a, under the function [data_operating.m](Data/data_operating.m) with t_diode = 10 ps and t_diode = 1 ps, respectively,
 and it is structured as follows:
 
+```mermaid
+graph LR;
+A[initial_data.m]-->D(Identifying the breast parameters);
+A-->B[data_source.m]-->D;
+A-->C[data_work.m]-->D;
+D-->E[RadialGraphics.m];
+E-->F(((Figure 3a)));
+```
+
+
 ### [RadialGraphics_prostate.m](FluenceGraphicalRepresentations/RadialGraphics_prostate.m)
 
 This script plots Figures 3c and 4c, under the function [data_operating.m](Data/data_operating.m) with t_diode = 10 ps and t_diode = 1 ps, respectively,
