@@ -14,7 +14,7 @@ function ssphir0 = Rsolution_A2(beta_out, Rf, rr, index_r, b0)
 if isempty(rr) || length(index_r) ~= 2
     error('Invalid inputs: rr must be non-empty, and index_r must have two elements.');
 end
-
+% to ensure proper indices
 if index_r(1) < 1 || index_r(1) >= index_r(2) || index_r(2) >= length(rr)
     error('Invalid input: index_r should be 1 <= index_r(1) < index_r(2) < length(rr).');
 end
