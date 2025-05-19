@@ -15,10 +15,6 @@ if isempty(rr) || length(index_r) ~= 2
     error('Invalid inputs: rr must be non-empty, and index_r must have two elements.');
 end
 
-if rr(1) < 0  % Floating-Point Precision
-  error('Invalid input: rr stands for positive radius array.')
-end 
-
 if index_r(1) < 1 || index_r(1) >= index_r(2) || index_r(2) >= length(rr)
     error('Invalid input: index_r should be 1 <= index_r(1) < index_r(2) < length(rr).');
 end
