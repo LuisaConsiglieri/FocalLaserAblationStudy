@@ -57,32 +57,30 @@ elseif  beta_out > 0
 end
 
 ssphir0 = zeros(1,length(rr)); % 1x100
-% First calculations of the fluence rate as function of the radius
-for i = 1:r_i
+% Calculations of the fluence rate as function of the radius
+for i = 1:length(rr)
   if rr(i) < r_f
     ssphir0(i) = Rf;
-  else % if r(i) < r_i
+  elseif rr(i) < r_i
     ssphir0(i) =  Rf - b0*log(rr(i)/r_f);
-  end
-end
-
-% Calculations of a decreasing profile.
-while i < length(rr)
-  i++;
-  if beta_out < 0
-    Dphir0 = - b_o*(Jo*besselj(1, b_o*rr(i)) + Yo*bessely(1, b_o*rr(i)));
-    if Dphir0 > 0
-      break
-    else
-      ssphir0(i) = Jo*besselj(0, b_o*rr(i)) + Yo*bessely(0, b_o*rr(i)) ;
-    end
-  elseif beta_out > 0
-    Dphir0 = b_o*(Io*besseli(1, b_o*rr(i)) - Ko*besselk(1, b_o*rr(i)));
-    if Dphir0 > 0
-      break
-    else
-      ssphir0(i) = Io*besseli(0, b_o*rr(i)) + Ko*besselk(0, b_o*rr(i)) ;
-    end
+  else
+      if beta_out < 0
+        Dphir0 = - b_o*(Jo*besselj(1, b_o*rr(i)) + Yo*bessely(1, b_o*rr(i)));
+        if Dphir0 > 0
+          break;
+        else
+          ssphir0(i) = Jo*besselj(0, b_o*rr(i)) + Yo*bessely(0, b_o*rr(i));
+        end
+      elseif beta_out > 0
+        Dphir0 = b_o*(Io*besseli(1, b_o*rr(i)) - Ko*besselk(1, b_o*rr(i)));
+        if Dphir0 > 0
+          break;
+        else
+          ssphir0(i) = Io*besseli(0, b_o*rr(i)) + Ko*besselk(0, b_o*rr(i));
+        end
+      else
+        % Handle beta_out == 0 
+      end
   end
 end
 
