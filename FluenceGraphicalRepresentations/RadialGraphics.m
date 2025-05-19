@@ -4,7 +4,7 @@ choice = 1; % blue solid
 [ll pw t_p] = data_operating(choice); % wavelength, power and pulse width choice
 Fluence_rate
 Xtp = exp(zeta_in*t_p);
-Rfluence = Fluence_zell(Xtp, rr, phir0, - ss_phir1, z1, phiz1, indices(3:4));
+Rfluence = Fluence_zell(Xtp, rr, phir0, - ss_phir1, z1, phiz1, indices(3));
 Rbreast1 = plot(rr, Rfluence(:, d), 'b');
 hold on
 
@@ -12,7 +12,7 @@ choice = 2; % blue dashed
 [ll pw t_p] = data_operating(choice); % wavelength, power and pulse width choice
 Fluence_rate
 Xtp = exp(zeta_in*t_p);
-Rfluence = Fluence_zell(Xtp, rr, phir0, - ss_phir1, z1, phiz1, indices(3:4));
+Rfluence = Fluence_zell(Xtp, rr, phir0, - ss_phir1, z1, phiz1, indices(3));
 Rbreast2 = plot(rr, Rfluence(:, d), 'b--');
 hold on
 
@@ -20,7 +20,7 @@ choice = 3; % red dashed
 [ll pw t_p] = data_operating(choice); % wavelength, power and pulse width choice
 Fluence_rate
 Xtp = exp(zeta_in*t_p);
-Rfluence = Fluence_zell(Xtp, rr, phir0, - ss_phir1, z1, phiz1, indices(3:4));
+Rfluence = Fluence_zell(Xtp, rr, phir0, - ss_phir1, z1, phiz1, indices(3));
 Rbreast3 = plot(rr, Rfluence(:, d), 'r--');
 hold off
 
