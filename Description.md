@@ -129,6 +129,20 @@ This function computes the radial elementary solutions. This function assumes th
   - b0       - positive constant determined with the Robin boundary condition (6), which is given at Appendix A2.
 - Output: R_3 (Appendix A.2) altogether with R_4 (Appendix B).
 
+### [Fluence_zell.m](ExactSolutions/Fluence_zell.m)
+
+This function computes the fluence rate $\phi(r,z)$, for  $z\leq\ell$. This function assumes that the input argument (Xtp, rr, phir0, ssphir, z1, phiz1, i0) is provided correctly when calling the function. 
+
+- Inputs:
+  - Xtp stands for the temporal parameter;
+  - rr stands for array of $r$-coordinates;
+  - phir0 stands for the radial functions ($R_1$ and $R_2$) contained in unsteady-state part of $\phi$;
+  - ssphir stands for the radial functions ($R_3$ and $R_4$) contained in steady-state part of $\phi$;
+  - z1 stands for array of $z$-coordinates, with z1(end) = $\ell$, corresponding to the tumor tissue;
+  - phiz1 stands for the [Z-solution](###Zsolution.m);
+  - i0 stands for the relevant index of the location of the focus $z=0$.
+
+
 ## Graphical representations of the fluence rate directory contents
 
 The folder [FluenceGraphicalRepresentations](FluenceGraphicalRepresentations) deals with the graphical representations of the fluence rate $\phi$ $[\textnormal{W/mm}^2]$, as illustrated in Figures 3 and 4 if $t_\mathrm{p} = 10$ ps and $t_\mathrm{p} = 1$ ps, respectively [Consiglieri, 2025].
