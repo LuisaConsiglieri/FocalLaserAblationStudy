@@ -7,12 +7,12 @@
 
 The repository includes files such as README, LICENSE, CODE_OF_CONDUCT, SECURITY, CITATION,
 and the following directories, which contain the computer code for research on modeling Focal Laser Ablation (FLA). 
-* [Data](#data-directory-contents)
-* [Source](#graphical-representations-of-the-source-s-directory-contents)
-* [Exact solutions](#exact-solutions-directory-contents)
-* [Fluence rate](#graphical-representations-of-the-fluence-rate-directory-contents)
+* [Data](#data)
+* [Source](#graphical-representations-of-the-source-s)
+* [Exact solutions](#exact-solutions)
+* [Fluence rate](#graphical-representations-of-the-fluence-rate)
 
-## Data directory contents
+## Data
 
 ### [data_geometry.m](data/data_geometry.m)
 
@@ -43,7 +43,7 @@ This script stores the wavelengths and powers under study, and correspondent tem
 
 This script stores the working parameters, according to Appendices A and B <https://doi.org/10.3390/photonics12040400>.
 
-## Graphical representations of the source S directory contents
+## Graphical representations of the source S
 
 The folder [SourceGraphicalRepresentations](SourceGraphicalRepresentations) deals with the source of the scattered photons $S$ $[\textnormal{W/mm}^3]$, defined in (2) [Consiglieri, 2025a], and its graphical representations in Figure 2 [Consiglieri, 2025a].
 
@@ -89,7 +89,7 @@ This script produces the graphical representations to the source $S(r_\mathrm{f}
 
 This script produces the graphical representations to the source $S(r_\mathrm{f},z)$ in the tumor-healthy prostate tissue, as illustrated in Figures 2c and 2d.
 
-## Exact solutions directory contents
+## Exact solutions
 
 The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, and its exact form as established in Section 4.1 (at $t = t_\mathrm{p}$) [Consiglieri, 2025].
 
@@ -131,7 +131,7 @@ This function computes the radial elementary solutions. This function assumes th
 
 ### [Fluence_zell.m](ExactSolutions/Fluence_zell.m)
 
-This function computes the fluence rate $\phi(r,z)$, for  $z\leq\ell$. This function assumes that the input argument (Xtp, rr, phir0, ssphir, z1, phiz1, i0) is provided correctly when calling the function. 
+This function computes the fluence rate $\phi(r,z)$, for  $z\leq\ell$. This function assumes that the input argument (Xtp, rr, phir0, ssphir, z1, phiz1, i0) is provided correctly. The input arguments are all properly defined and have the correct dimensions when calling the function.
 
 - Inputs:
   - Xtp stands for the temporal parameter;
@@ -139,11 +139,11 @@ This function computes the fluence rate $\phi(r,z)$, for  $z\leq\ell$. This func
   - phir0 stands for the radial functions ($R_1$ and $R_2$) contained in unsteady-state part of $\phi$;
   - ssphir stands for the radial functions ($R_3$ and $R_4$) contained in steady-state part of $\phi$;
   - z1 stands for array of $z$-coordinates, with z1(end) = $\ell$, corresponding to the tumor tissue;
-  - phiz1 stands for the [Z-solution](###Zsolution.m);
+  - phiz1 stands for the [Z-solution](#Zsolution.m);
   - i0 stands for the relevant index of the location of the focus $z=0$.
 
 
-## Graphical representations of the fluence rate directory contents
+## Graphical representations of the fluence rate
 
 The folder [FluenceGraphicalRepresentations](FluenceGraphicalRepresentations) deals with the graphical representations of the fluence rate $\phi$ $[\textnormal{W/mm}^2]$, as illustrated in Figures 3 and 4 if $t_\mathrm{p} = 10$ ps and $t_\mathrm{p} = 1$ ps, respectively [Consiglieri, 2025].
 
@@ -180,8 +180,10 @@ and it is structured as follows:
 
 ```mermaid
 graph LR;
-A[initial_data.m]-->D{(Identifying the prostate parameters);
-A-->B[data_source.m]-->D;
-A-->C[data_work.m]-->D;
+A[initial_data.m]-->B[data_source.m];
+A-->C[data_work.m];
+A-->D(Identifying the prostate parameters);
+B-->D;
+C-->D;
 D-->E[RadialGraphics.m]-->F(((Figure)));
 ```
