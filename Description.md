@@ -7,12 +7,12 @@
 
 The repository includes files such as README, LICENSE, CODE_OF_CONDUCT, SECURITY, CITATION,
 and the following directories, which contain the computer code for research on modeling Focal Laser Ablation (FLA). 
-* [Data](#data-directory-contents)
-* [Source](#graphical-representations-of-the-source-s-directory-contents)
-* [Exact solutions](#exact-solutions-directory-contents)
-* [Fluence rate](#graphical-representations-of-the-fluence-rate-directory-contents)
+* [Data](#data)
+* [Source](#graphical-representations-of-the-source-s)
+* [Exact solutions](#exact-solutions)
+* [Fluence rate](#graphical-representations-of-the-fluence-rate)
 
-## Data directory contents
+## Data
 
 ### [data_geometry.m](data/data_geometry.m)
 
@@ -43,7 +43,8 @@ This script stores the wavelengths and powers under study, and correspondent tem
 
 This script stores the working parameters, according to Appendices A and B <https://doi.org/10.3390/photonics12040400>.
 
-## Graphical representations of the source S directory contents
+
+## Graphical representations of the source S
 
 The folder [SourceGraphicalRepresentations](SourceGraphicalRepresentations) deals with the source of the scattered photons $S$ $[\textnormal{W/mm}^3]$, defined in (2) [Consiglieri, 2025a], and its graphical representations in Figure 2 [Consiglieri, 2025a].
 
@@ -71,8 +72,7 @@ D--SourceGraphics_semilogy.m-->H[Figure 2d];
 >    - 810 nm and power of 5 W;
 >
 >    - 980 nm and powers of 1.3 W and 5 W.
-
-
+ 
 ### [SourceGraphics_linear.m](SourceGraphicalRepresentations/SourceGraphics_linear.m)
 
 This function produces 2-D plots to the source $S(r_\mathrm{f},z)$ for the wavelengths and powers under study. This function assumes that the input arguments z1, source1, z2, and source2 are all properly defined and have the correct dimensions when calling the function.
@@ -89,25 +89,101 @@ This script produces the graphical representations to the source $S(r_\mathrm{f}
 
 This script produces the graphical representations to the source $S(r_\mathrm{f},z)$ in the tumor-healthy prostate tissue, as illustrated in Figures 2c and 2d.
 
-## Exact solutions directory contents
+## Exact solutions
 
-The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, and its graphical representations in Figure 3 [Consiglieri, 2025].
+The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, and its exact form as established in Section 4.1 (at $t = t_\mathrm{p}$) [Consiglieri, 2025].
 
 [Consiglieri, 2025] Consiglieri, Luisa. Exact Solutions to Cancer Laser Ablation Modeling. *Photonics* **12** :4 (2025), 400. <https://doi.org/10.3390/photonics12040400>
 
 ### [Zsolution.m](ExactSolutions/Zsolution.m)
 
-This function computes the fluence rate as function on the longitudinal coordinate $z$. This function assumes that the input argument (mu_t, eta, zz, ell, index_z) is provided correctly when calling the function. As defined in [initial_data.m](Data/initial_data.m):
+This function computes the longitudinal elementary solution $Z(z)$. This function assumes that the input argument (mu_t, eta, zz, ell, index_z) is provided correctly when calling the function. As defined in [initial_data.m](Data/initial_data.m):
 * mu_t stands for total attenuation coefficient $\mu_\mathrm{t}$ $[\mathrm{mm}^{-1}]$;
-* zz stands for the longitudinal coordinate $z$;
+* zz stands for the optical coordinate $z$;
 * ell stands for the longitudinal distance $z = \ell$, corresponding to the tumor-healthy interface;
-* index_z stands for the relevant indices of zz, namely the tumor-healthy interface and outer boundary $z = L$,
+* index_z stands for the relevant indices of zz, namely the location of the focus $z=0$ and the tumor-healthy interface $z = \ell$,
 
 while eta is the real parameter $\eta$.
 
-## Graphical representations of the fluence rate directory contents
+### [Rsolution_A1.m](ExactSolutions/Rsolution_A1.m)
 
-The folder [FluenceGraphicalRepresentations](FluenceGraphicalRepresentations) deals with the fluence rate $\phi$ $[\textnormal{W/mm}^2]$.
+This function computes the radial elementary solutions. This function assumes that the input argument (bt, Rf, rr, index_r, Rbc) is provided correctly when calling the function. In particular, the parameters passed to the Bessel functions do not lead to numerical inaccuracies in the Bessel function calculations. 
+
+- Inputs:
+  - bt - Parameter $(\beta_1, \beta_2)$ related to fluence distribution, as defined in Appendices A.1 and B, respectively;
+  - Rf       - Maximum value of the radial solution;
+  - rr       - Array of r-coordinates;
+  - index_r  - Relevant indices in the radial direction, namely the fiber radius $r_\mathrm{f}$ and the inner radius $r_\mathrm{i}$;
+  - Rbc      - constant aligned with the Robin boundary condition (6).
+- Output: R_1 (Appendix A.1) altogether with R_2 (Appendix B).
+
+### [Rsolution_A2.m](ExactSolutions/Rsolution_A2.m)
+
+This function computes the radial elementary solutions. This function assumes that the input argument (beta_out, Rf, rr, index_r, b0) is provided correctly when calling the function. In particular, the parameters passed to the Bessel functions do not lead to numerical inaccuracies in the Bessel function calculations. 
+
+- Inputs:
+  - beta_out - Parameter $\beta_2$ related to fluence distribution, as defined in Appendix B;
+  - Rf       - Maximum value of the radial solution;
+  - rr       - Array of r-coordinates;
+  - index_r  - Relevant indices in the radial direction, namely the fiber radius $r_\mathrm{f}$ and the inner radius $r_\mathrm{i}$;
+  - b0       - positive constant determined with the Robin boundary condition (6), which is given at Appendix A2.
+- Output: R_3 (Appendix A.2) altogether with R_4 (Appendix B).
+
+### [Fluence_zell.m](ExactSolutions/Fluence_zell.m)
+
+This function computes the fluence rate $\phi(r,z)$, for  $z\leq\ell$. This function assumes that the input argument (Xtp, rr, phir0, ssphir, z1, phiz1, i0) is provided correctly. The input arguments are all properly defined and have the correct dimensions when calling the function.
+
+- Inputs:
+  - Xtp stands for the temporal parameter;
+  - rr stands for array of $r$-coordinates;
+  - phir0 stands for the radial functions ($R_1$ and $R_2$) contained in unsteady-state part of $\phi$;
+  - ssphir stands for the radial functions ($R_3$ and $R_4$) contained in steady-state part of $\phi$;
+  - z1 stands for array of $z$-coordinates, with z1(end) = $\ell$, corresponding to the tumor tissue;
+  - phiz1 stands for the [Z-solution](#Zsolution.m);
+  - i0 stands for the relevant index of the location of the focus $z=0$.
+
+
+## Graphical representations of the fluence rate
+
+The folder [FluenceGraphicalRepresentations](FluenceGraphicalRepresentations) deals with the graphical representations of the fluence rate $\phi$ $[\textnormal{W/mm}^2]$, as illustrated in Figures 3 and 4 if $t_\mathrm{p} = 10$ ps and $t_\mathrm{p} = 1$ ps, respectively [Consiglieri, 2025].
 
 ### [RadialGraphics.m](FluenceGraphicalRepresentations/RadialGraphics.m)
 
+For each optical distance zz(d) (1<= d < length(zz)), this switch-script is structured as follows:
+
+```mermaid
+graph LR;
+A1[/choice = 1/]-->B{data_operating.m}-->C1[Fluence_rate.m]--Fluence_zell.m-->E(((Plot)));
+A2[/choice = 2/]-->B-->C2[Fluence_rate.m]--Fluence_zell.m-->E;
+A3[/choice = 3/]-->B-->C3[Fluence_rate.m]--Fluence_zell.m-->E;
+```
+
+### [RadialGraphics_breast.m](FluenceGraphicalRepresentations/RadialGraphics_breast.m)
+
+This script plots Figures 3a and 4a, under the function [data_operating.m](Data/data_operating.m) with t_diode = 10 ps and t_diode = 1 ps, respectively,
+and it is structured as follows:
+
+```mermaid
+graph LR;
+A[initial_data.m]-->D(Identifying the breast parameters);
+A-->B[data_source.m]-->D;
+A-->C[data_work.m]-->D;
+D-->E[RadialGraphics.m];
+E-->F(((Figure)));
+```
+
+### [RadialGraphics_prostate.m](FluenceGraphicalRepresentations/RadialGraphics_prostate.m)
+
+This script plots Figures 3c and 4c, under the function [data_operating.m](Data/data_operating.m) with t_diode = 10 ps and t_diode = 1 ps, respectively,
+and it is structured as follows:
+
+```mermaid
+graph LR;
+A[initial_data.m]-->B[data_source.m];
+A-->C[data_work.m];
+A-->D(Identifying the prostate parameters);
+B-->D;
+C-->D;
+D-->E[RadialGraphics.m]-->F(((Figure)));
+```
+ 
