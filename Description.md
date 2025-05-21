@@ -43,6 +43,7 @@ This script stores the wavelengths and powers under study, and correspondent tem
 
 This script stores the working parameters, according to Appendices A and B <https://doi.org/10.3390/photonics12040400>.
 
+
 ## Graphical representations of the source S
 
 The folder [SourceGraphicalRepresentations](SourceGraphicalRepresentations) deals with the source of the scattered photons $S$ $[\textnormal{W/mm}^3]$, defined in (2) [Consiglieri, 2025a], and its graphical representations in Figure 2 [Consiglieri, 2025a].
@@ -71,8 +72,7 @@ D--SourceGraphics_semilogy.m-->H[Figure 2d];
 >    - 810 nm and power of 5 W;
 >
 >    - 980 nm and powers of 1.3 W and 5 W.
-
-
+ 
 ### [SourceGraphics_linear.m](SourceGraphicalRepresentations/SourceGraphics_linear.m)
 
 This function produces 2-D plots to the source $S(r_\mathrm{f},z)$ for the wavelengths and powers under study. This function assumes that the input arguments z1, source1, z2, and source2 are all properly defined and have the correct dimensions when calling the function.
@@ -172,7 +172,6 @@ D-->E[RadialGraphics.m];
 E-->F(((Figure)));
 ```
 
-
 ### [RadialGraphics_prostate.m](FluenceGraphicalRepresentations/RadialGraphics_prostate.m)
 
 This script plots Figures 3c and 4c, under the function [data_operating.m](Data/data_operating.m) with t_diode = 10 ps and t_diode = 1 ps, respectively,
@@ -187,3 +186,4 @@ B-->D;
 C-->D;
 D-->E[RadialGraphics.m]-->F(((Figure)));
 ```
+ 
