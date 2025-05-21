@@ -139,7 +139,7 @@ This function computes the fluence rate $\phi(r,z)$, for  $z\leq\ell$. This func
   - phir0 stands for the radial functions ($R_1$ and $R_2$) contained in unsteady-state part of $\phi$;
   - ssphir stands for the radial functions ($R_3$ and $R_4$) contained in steady-state part of $\phi$;
   - z1 stands for array of $z$-coordinates, with z1(end) = $\ell$, corresponding to the tumor tissue;
-  - phiz1 stands for the [Z-solution](#Zsolution.m);
+  - phiz1 stands for the [Z-solution](ExactSolutions/Zsolution.m);
   - i0 stands for the relevant index of the location of the focus $z=0$.
 
 
