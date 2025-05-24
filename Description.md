@@ -97,13 +97,15 @@ The folder [ExactSolutions](ExactSolutions) deals with the fluence rate $\phi$, 
 
 ### [Zsolution.m](ExactSolutions/Zsolution.m)
 
-This function computes the longitudinal elementary solution $Z(z)$. This function assumes that the input argument (mu_t, eta, zz, ell, index_z) is provided correctly when calling the function. As defined in [initial_data.m](Data/initial_data.m):
-* mu_t stands for total attenuation coefficient $\mu_\mathrm{t}$ $[\mathrm{mm}^{-1}]$;
-* zz stands for the optical coordinate $z$;
-* ell stands for the longitudinal distance $z = \ell$, corresponding to the tumor-healthy interface;
-* index_z stands for the relevant indices of zz, namely the location of the focus $z=0$ and the tumor-healthy interface $z = \ell$,
+This function computes the longitudinal elementary solution $Z(z)$. This function assumes that the input argument (mu_t, eta, zz, ell, index_z) is provided correctly when calling the function. 
 
-while eta is the real parameter $\eta$.
+- Inputs as defined in [initial_data.m](Data/initial_data.m):
+  - mu_t stands for total attenuation coefficient $\mu_\mathrm{t}$ $[\mathrm{mm}^{-1}]$;
+  - zz stands for the optical coordinate $z$;
+  - ell stands for the longitudinal distance $z = \ell$, corresponding to the tumor-healthy interface;
+  - index_z stands for the relevant indices of zz, namely the location of the focus $z=0$ and the tumor-healthy interface $z = \ell$,
+
+  while eta is the real parameter $\eta$.
 
 ### [Rsolution_A1.m](ExactSolutions/Rsolution_A1.m)
 
@@ -128,6 +130,10 @@ This function computes the radial elementary solutions. This function assumes th
   - index_r  - Relevant indices in the radial direction, namely the fiber radius $r_\mathrm{f}$ and the inner radius $r_\mathrm{i}$;
   - b0       - positive constant determined with the Robin boundary condition (6), which is given at Appendix A2.
 - Output: R_3 (Appendix A.2) altogether with R_4 (Appendix B).
+
+### [Fluence_rate.m](ExactSolutions/Fluence_rate.m)
+
+This script computes the essential parameters and functions for the fluence rate as function on $(r,z,t)$. 
 
 ### [Fluence_zell.m](ExactSolutions/Fluence_zell.m)
 
